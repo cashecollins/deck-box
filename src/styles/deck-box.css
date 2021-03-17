@@ -1,11 +1,30 @@
 .deck-box-container {
     display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-column-gap: 15px;
+}
+
+.deck-box-contents-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 25px;
+    grid-column-gap: 50px;
     grid-row-gap: 25px;
     width: 60%;
     margin-left: 20%;
     margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.deck-box-side-nav {
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: darkslategray;
+    color: white;
+    padding: 25px;
+}
+
+.deck-box-nav-option {
+    padding: 15px;
 }
 
 .deck-box {
@@ -13,8 +32,10 @@
     grid-template-columns: 1fr;
     align-items: end;
     background-color: lightgray;
-    min-height: 200px;
+    min-height: 250px;
     background-size: cover;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px gray;
 }
 
 .deck-title{
@@ -25,4 +46,5 @@
     background-color: black;
     color: white;
     padding: 10px 0;
+    margin-bottom: 22px;
 }

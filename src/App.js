@@ -5,25 +5,20 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 function App() {
-    var style = {
-        backgroundColor: "gray",
-        color: "white",
-        height: "100px",
-        textAlign: 'center'
-    }
-
     var footer = {
-        backgroundColor: "gray",
+        backgroundColor: "black",
         color: "white",
         height: "100px",
         textAlign: 'center',
         width: '100%',
-        position: 'fixed',
-        bottom: '0'
     }
     return (
         <div className="App-page">
-            <div style= {style}>Header</div>
+            <div className="App-header">
+                <div>Options</div>
+                <div>Deck Box</div>
+                <div>Login</div>
+            </div>
             <Switch>
                 <Route path="/" component={Home} exact />
                 <Route path="/deck-box" component={DeckBox} />
