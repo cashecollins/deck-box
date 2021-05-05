@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/deck-box.css';
 import '../App.css';
+import axios from "axios";
 
 class DeckBox extends Component {
     constructor(props) {
@@ -25,15 +26,16 @@ class DeckBox extends Component {
             {id: 8, background: this.bloodMoonBackground, name: 'Ponza'},
             {id: 9, background: this.liquimetalBackground, name: 'Liquimetal Midrange'}
         ]
-        // this.state.decks = decks;
         this.setState({decks: decks})
 
         // post api setup
-        // axios.get(`https://jsonplaceholder.typicode.com/users`)
-        //     .then(result => {
-        //         const decks = result.data;
-        //         this.setState({ decks: decks });
-        //     })
+        axios.get(`https://api.magicthegathering.io/v1/cards?name=primeval+titan`)
+            .then(result => {
+                console.log(result);
+                const card_data = result.data;
+                console.log(card_data)
+                // this.setState({ decks: decks });
+            })
     }
 
     render() {
